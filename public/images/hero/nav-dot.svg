@@ -1,0 +1,28 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Group 314">
+<circle id="Ellipse 175" cx="3.5" cy="3.5" r="3.5" fill="url(#paint0_linear_0_13)"/>
+<g id="Container">
+<rect x="0.4375" y="0.4375" width="6.125" height="6.125" rx="3.0625" fill="url(#pattern0_0_13)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_13" x1="3.42857" y1="1.10917e-09" x2="3.5" y2="7" gradientUnits="userSpaceOnUse">
+<stop offset="0.503066" stop-color="white"/>
+<stop offset="1" stop-color="#9D9D9D"/>
+</linearGradient>
+<pattern id="pattern0_0_13" patternUnits="userSpaceOnUse" patternTransform="matrix(0.98 0 0 0.98 0.4375 0.4375)" preserveAspectRatio="none" viewBox="0 0 0.98 0.98" width="1" height="1">
+<use xlink:href="#pattern0_0_13_inner" transform="translate(-0.98 -0.98)"/>
+<use xlink:href="#pattern0_0_13_inner" transform="translate(0 -0.98)"/>
+<use xlink:href="#pattern0_0_13_inner" transform="translate(-0.98 0)"/>
+<g id="pattern0_0_13_inner">
+<g id="Group 302">
+<rect id="Rectangle 135" width="0.5" height="0.5" fill="#F4F3F3"/>
+<path id="Rectangle 139" d="M0 0H0.5L0.244048 0.244048L0 0.5V0Z" fill="#BBB8B8"/>
+<rect id="Rectangle 136" x="0.5" width="0.5" height="0.5" fill="#D9D9D9"/>
+<rect id="Rectangle 137" y="0.5" width="0.5" height="0.5" fill="#D9D9D9"/>
+<path id="Rectangle 138" d="M0.5 0.5H1V1H0.5V0.5Z" fill="#F4F3F3"/>
+<path id="Rectangle 140" d="M0.5 0.5H1L0.744048 0.744048L0.5 1V0.5Z" fill="#BBB8B8"/>
+</g>
+</g>
+</pattern></defs>
+</svg>

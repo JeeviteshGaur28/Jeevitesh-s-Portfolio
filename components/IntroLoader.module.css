@@ -1,0 +1,123 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background-color: #eff0f1;
+}
+
+.grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 112.5%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  z-index: 0;
+}
+
+/* Solid curtain hiding the not-yet-revealed portion of the grid. Driven
+   purely by `transform: translateX()` from IntroLoader.tsx so the reveal
+   stays on the compositor thread instead of repainting a mask every
+   frame — animating a mask-image's gradient stops per-frame is what was
+   causing the jank. */
+.cover {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent 0, #eff0f1 80px, #eff0f1 100%);
+  transform: translateX(0%);
+  will-change: transform;
+}
+
+.pillWrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 176px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+
+.pill {
+  box-sizing: border-box;
+  width: 86px;
+  height: 176px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background-color: #eff0f1;
+  border-radius: 98px;
+  box-shadow:
+    10px 10px 20px rgba(24, 25, 27, 0.18),
+    -10px -10px 20px rgba(255, 255, 255, 0.95);
+  transform: rotate(-90deg);
+}
+
+.pillInner {
+  width: 120px;
+  height: 30px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  transform: rotate(90deg);
+}
+
+.pillText {
+  font-family: var(--font-bricolage);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.1px;
+  text-transform: uppercase;
+  color: #0c0c0c;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  background-color: #fe5b2a;
+  opacity: 0.8;
+}
+
+.exitPanel {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  background-color: #fe5b2a;
+  transform: translateY(100%);
+}
+
+.exitPanel.exit {
+  animation: exitSlide 900ms ease-out forwards;
+}
+
+@keyframes exitSlide {
+  from {
+    transform: translateY(100%);
+    background-color: #fe5b2a;
+  }
+  to {
+    /* Matches the real hero background (#EFF0F1, confirmed from Figma) so
+       the swap to the hero underneath is seamless once this unmounts. */
+    transform: translateY(0%);
+    background-color: #eff0f1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exitPanel.exit {
+    animation-duration: 0.01ms;
+  }
+}

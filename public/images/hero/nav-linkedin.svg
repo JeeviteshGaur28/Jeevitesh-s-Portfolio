@@ -1,0 +1,20 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-21" y="-21" width="96" height="96"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(10.5px);clip-path:url(#bgblur_0_0_18_clip_path);height:100%;width:100%"></div></foreignObject><g id="Nav button" filter="url(#filter0_i_0_18)" data-figma-bg-blur-radius="21">
+<path d="M0 27C0 12.0883 12.0883 0 27 0V0C41.9117 0 54 12.0883 54 27V27C54 41.9117 41.9117 54 27 54V54C12.0883 54 0 41.9117 0 27V27Z" fill="#737373"/>
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M24.1719 23.6659H28.2573V25.7009C28.8458 24.5305 30.355 23.4789 32.6221 23.4789C36.9682 23.4789 38 25.8087 38 30.0833V38H33.6V31.0568C33.6 28.6225 33.0115 27.2497 31.5133 27.2497C29.4354 27.2497 28.5719 28.7292 28.5719 31.0557V38H24.1719V23.6659ZM16.627 37.813H21.027V23.4789H16.627V37.813ZM21.6573 18.805C21.6575 19.1738 21.5843 19.539 21.4421 19.8792C21.2999 20.2195 21.0915 20.5282 20.829 20.7872C20.5657 21.0491 20.2534 21.2566 19.9099 21.3978C19.5664 21.539 19.1984 21.6111 18.827 21.61C18.0786 21.6083 17.3606 21.3133 16.8272 20.7883C16.5657 20.5283 16.3581 20.2193 16.2161 19.879C16.0742 19.5387 16.0008 19.1737 16 18.805C16 18.0603 16.297 17.3475 16.8283 16.8217C17.3604 16.2947 18.0792 15.9993 18.8281 16C19.5783 16 20.2977 16.2959 20.829 16.8217C21.3603 17.3475 21.6573 18.0603 21.6573 18.805Z" fill="#EFF0F1"/>
+</g>
+<defs>
+<filter id="filter0_i_0_18" x="-21" y="-21" width="96" height="96" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="2" operator="erode" in="SourceAlpha" result="effect1_innerShadow_0_18"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_0_18"/>
+</filter>
+<clipPath id="bgblur_0_0_18_clip_path" transform="translate(21 21)"><path d="M0 27C0 12.0883 12.0883 0 27 0V0C41.9117 0 54 12.0883 54 27V27C54 41.9117 41.9117 54 27 54V54C12.0883 54 0 41.9117 0 27V27Z"/>
+</clipPath></defs>
+</svg>

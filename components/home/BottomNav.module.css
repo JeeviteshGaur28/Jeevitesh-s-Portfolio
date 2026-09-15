@@ -1,0 +1,10 @@
+/* Behance/LinkedIn hover fill - independent of the nav expand/collapse.
+   The actual state is driven by the `hovered` prop (React state, toggled
+   via onMouseEnter/Leave on the link) rather than a CSS :hover pseudo,
+   so there's no ambiguity about whether it fires. The idle "glass" ring
+   and the opaque blue hover fill are separate layers (a gradient can't be
+   transitioned to a flat color), so what actually animates is this
+   layer's opacity. */
+.hoverFade {
+  transition: opacity 200ms ease;
+}

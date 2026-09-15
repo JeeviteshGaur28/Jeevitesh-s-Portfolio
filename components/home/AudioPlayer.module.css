@@ -1,0 +1,18 @@
+/* CSS Modules scope @keyframes names too, so this must be referenced via
+   styles.discSpin (not the bare "discSpin" string) wherever it's used in
+   JS. Driving the spin via CSS animation-play-state (toggled by the
+   `playing` prop) rather than React state means pausing freezes the
+   rotation at its exact current angle for free - the browser keeps the
+   animation's own internal clock, it doesn't reset - and resuming
+   continues from that same point with no extra bookkeeping needed. */
+@keyframes discSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .disc {
+    animation: none !important;
+  }
+}

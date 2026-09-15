@@ -1,0 +1,119 @@
+.section {
+  position: relative;
+  width: 1440px;
+  height: 488px;
+  color: #48382f;
+  background: #e9e4d7;
+  overflow: hidden;
+}
+
+.section h1 {
+  position: absolute;
+  left: 259px;
+  top: 98px;
+  width: 407px;
+  height: 49px;
+  margin: 0;
+  color: #48382f;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 700;
+  font-variation-settings: "SOFT" 0, "WONK" 1;
+  line-height: normal;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.meta {
+  position: absolute;
+  left: 538px;
+  top: 191px;
+  width: 572px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  gap: 112px;
+  font-family: var(--font-lato), Arial, sans-serif;
+}
+
+.tag {
+  display: flex;
+  flex: 0 0 128px;
+  width: 128px;
+  height: 33px;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(180, 160, 120, 0.51);
+  border-radius: 15px;
+  color: #000;
+  font-family: var(--font-lato), Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.meta p {
+  width: 332px;
+  height: 25px;
+  margin: 0;
+  color: #000;
+  font-family: var(--font-lato), Arial, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: normal;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.divider {
+  position: absolute;
+  left: 719.5px;
+  top: 191px;
+  width: 3px;
+  height: 197px;
+  object-fit: fill;
+}
+
+.leftCopy,
+.rightCopy {
+  position: absolute;
+  top: 228px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #48382f;
+  font-family: var(--font-lato), Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.leftCopy {
+  left: 156px;
+  width: 510px;
+  height: 181px;
+  text-align: right;
+}
+
+.rightCopy {
+  left: 775px;
+  width: 556px;
+  height: 186px;
+  text-align: left;
+}
+
+.leftCopy p,
+.rightCopy p {
+  margin: 0;
+  font: inherit;
+}
+
+.leftCopy strong {
+  font-family: var(--font-lato), Arial, sans-serif;
+  font-weight: 700;
+}

@@ -1,0 +1,20 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="20" height="22.3137" viewBox="0 0 20 22.3137" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Vector" filter="url(#filter0_d_0_5)">
+<path d="M10 1.23124L10.6098 0.61475L10 0L9.39021 0.61475L10 1.23124ZM9.39021 1.84773L16.2804 8.81374L17.5 7.58075L10.6098 0.61475L9.39021 1.84773ZM9.39021 0.61475L5.94511 4.09775L2.5 7.58075L3.71957 8.81374L10.6098 1.84773L9.39021 0.61475Z" fill="black" fill-opacity="0.2" shape-rendering="crispEdges"/>
+<path d="M10 7.23124L10.6098 6.61475L10 6L9.39022 6.61475L10 7.23124ZM9.39022 7.84773L16.2804 14.8137L17.5 13.5808L10.6098 6.61475L9.39022 7.84773ZM9.39022 6.61475L5.94511 10.0978L2.5 13.5808L3.71957 14.8137L10.6098 7.84773L9.39022 6.61475Z" fill="black" fill-opacity="0.2" shape-rendering="crispEdges"/>
+<path d="M9.03516 8.19922L9.2959 8.46289L3.71875 14.1025L3.20312 13.5801L6.30078 10.4492L8.78027 7.94238L9.03516 8.19922ZM16.7959 13.5801L16.2803 14.1025L10.7031 8.46289L10.9648 8.19922L11.2188 7.94238L16.7959 13.5801ZM9.03516 2.19922L9.2959 2.46289L3.71875 8.10254L3.20312 7.58008L6.30078 4.44922L8.78027 1.94238L9.03516 2.19922ZM16.7959 7.58008L16.2803 8.10254L10.7031 2.46289L10.9648 2.19922L11.2188 1.94238L16.7959 7.58008Z" stroke="#F6EEDD" shape-rendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_d_0_5" x="-7.15495e-08" y="0" width="20" height="22.3137" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="5"/>
+<feGaussianBlur stdDeviation="1.25"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_5"/>
+<feBlend mode="normal" in="BackgroundImageFix" in2="effect1_dropShadow_0_5" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+</filter>
+</defs>
+</svg>
