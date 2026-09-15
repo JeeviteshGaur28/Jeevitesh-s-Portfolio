@@ -29,8 +29,10 @@ export function FloatingNav() {
           <span className={styles.navGlass} aria-hidden />
           <span className={styles.navContent}>
             <img className={styles.avatar} src="/images/buried-in-the-crowd/nav-avatar.png" alt="Jeevitesh Gaur" />
-            <span className={styles.availability}>Available for work</span>
-            <span className={styles.statusShell}><motion.i animate={{ opacity: [1, .15, 1], scale: [1, 1.25, 1] }} transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }} /></span>
+            <span className={styles.availabilityGroup}>
+              <span className={styles.availability}>Available for work</span>
+              <span className={styles.statusShell}><motion.i animate={{ opacity: [1, .15, 1], scale: [1, 1.25, 1] }} transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }} /></span>
+            </span>
             <span className={styles.email}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M4 6h16v12H4z" stroke="#18191B" strokeWidth="1.6" strokeLinejoin="round"/><path d="M4 7l8 6 8-6" stroke="#18191B" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg><span>Email me !</span></span>
           </span>
         </motion.a>

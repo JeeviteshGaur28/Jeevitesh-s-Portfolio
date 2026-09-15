@@ -24,7 +24,12 @@ function PlusDivider() {
       <img
         src="/images/plus-grid.png"
         alt=""
-        className="absolute left-0 top-0 h-full w-[112.5%] object-cover opacity-20"
+        className="absolute left-0 top-0 h-full w-[112.5%] object-cover opacity-20 dark:hidden"
+      />
+      <img
+        src="/images/plus-grid-dark.png"
+        alt=""
+        className="absolute left-0 top-0 hidden h-full w-[112.5%] object-cover dark:block"
       />
     </div>
   );
@@ -35,7 +40,7 @@ function HeadingRow() {
     <div className="border-[0.8px] border-[#c3c4c8] pb-[40px] pl-[27px] pt-[105px]">
       <div className="flex items-end gap-[10px]">
         <h2
-          className="whitespace-nowrap font-bricolage text-[52px] leading-[52.275px] tracking-[-1.792px] text-[#0C0C0C]"
+          className="whitespace-nowrap font-bricolage text-[52px] leading-[52.275px] tracking-[-1.792px] text-[#0C0C0C] dark:text-[#EFF0F1]"
           style={{ fontVariationSettings: '"opsz" 14, "wdth" 100' }}
         >
           Featured Projects
@@ -66,16 +71,16 @@ function SkillsRow() {
       transition={revealTransition}
     >
       <div className="flex items-center gap-[20px]">
-        <div className="flex shrink-0 items-center justify-center rounded-[98px] bg-[#EFF0F1] px-[28px] py-[16px] shadow-[10px_10px_20px_0px_rgba(24,25,27,0.18),-10px_-10px_20px_0px_rgba(255,255,255,0.95)]">
-          <p className="whitespace-nowrap font-bricolage text-[15px] font-medium text-[#18191B]">SKILLS</p>
+        <div className="flex shrink-0 items-center justify-center rounded-[98px] bg-[#EFF0F1] px-[28px] py-[16px] shadow-[10px_10px_20px_0px_rgba(24,25,27,0.18),-10px_-10px_20px_0px_rgba(255,255,255,0.95)] dark:bg-[#18191B] dark:shadow-[5px_5px_10px_0px_rgba(0,0,0,0.7),-5px_-5px_10px_0px_rgba(82,87,94,0.55)]">
+          <p className="whitespace-nowrap font-bricolage text-[15px] font-medium text-[#18191B] dark:text-[#EFF0F1]">SKILLS</p>
         </div>
         <div className="flex flex-wrap items-center gap-[8px]">
           {SKILLS.map((skill) => (
             <div
               key={skill}
-              className="flex shrink-0 items-center justify-center rounded-[20px] border-[0.8px] border-black bg-[#FDFDFD] px-[14px] py-[10px]"
+              className="flex shrink-0 items-center justify-center rounded-[20px] border-[0.8px] border-black bg-[#FDFDFD] px-[14px] py-[10px] dark:border-[#EFF0F1] dark:bg-[#18191B]"
             >
-              <p className="whitespace-nowrap font-outfit text-[14px] capitalize tracking-[0.2px] text-[#050505]">
+              <p className="whitespace-nowrap font-outfit text-[14px] capitalize tracking-[0.2px] text-[#050505] dark:text-[#EFF0F1]">
                 {skill}
               </p>
             </div>
@@ -88,11 +93,18 @@ function SkillsRow() {
 
 function TeamIcon({ team }: { team: "solo" | "group" }) {
   return (
-    <img
-      src={team === "solo" ? "/images/projects/team-solo.svg" : "/images/projects/team-group.svg"}
-      alt=""
-      className="h-[14px] w-[25px] shrink-0"
-    />
+    <>
+      <img
+        src={team === "solo" ? "/images/projects/team-solo.svg" : "/images/projects/team-group.svg"}
+        alt=""
+        className="h-[14px] w-[25px] shrink-0 dark:hidden"
+      />
+      <img
+        src={team === "solo" ? "/images/projects/team-solo-dark.svg" : "/images/projects/team-group-dark.svg"}
+        alt=""
+        className="hidden h-[14px] w-[25px] shrink-0 dark:block"
+      />
+    </>
   );
 }
 
@@ -180,7 +192,7 @@ const PROJECTS: Project[] = [
 // what the source file itself shows.
 function ProjectCard({ project, className }: { project: Project; className?: string }) {
   return (
-    <div className={`flex flex-col gap-[28px] bg-[#EFF0F1] px-[27px] py-[39px] ${className ?? ""}`}>
+    <div className={`flex flex-col gap-[28px] bg-[#EFF0F1] px-[27px] py-[39px] dark:bg-[#18191B] ${className ?? ""}`}>
       <div className="group/image relative h-[375px] w-full overflow-hidden bg-[#D9D9D9]">
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-90 opacity-0 transition-all duration-300 ease-out group-hover/image:scale-100 group-hover/image:opacity-100">
           {project.cta === "read" ? <ReadPill /> : <ComingSoonPill />}
@@ -191,14 +203,14 @@ function ProjectCard({ project, className }: { project: Project; className?: str
         <div className="flex flex-col gap-[6px]">
           <div className="flex items-center justify-between gap-[12px]">
             <h3
-              className="whitespace-nowrap font-bricolage text-[22px] font-medium capitalize tracking-[-0.2px] text-[#121212]"
+              className="whitespace-nowrap font-bricolage text-[22px] font-medium capitalize tracking-[-0.2px] text-[#121212] dark:text-[#EFF0F1]"
               style={{ fontVariationSettings: '"opsz" 14, "wdth" 100' }}
             >
               {project.title}
             </h3>
             <TeamIcon team={project.team} />
           </div>
-          <p className="font-outfit text-[16px] leading-[20.8px] text-[#121212]">{project.description}</p>
+          <p className="font-outfit text-[16px] leading-[20.8px] text-[#121212] dark:text-[#EFF0F1]">{project.description}</p>
         </div>
         <div className="flex flex-wrap items-center gap-[12px]">
           {project.tags.map((tag) => (
@@ -228,7 +240,7 @@ function ProjectRow({ projects }: { projects: [Project, Project] }) {
 
 export function FeaturedProjects() {
   return (
-    <section id="featured-projects" className="relative bg-[#EFF0F1]">
+    <section id="featured-projects" className="relative bg-[#EFF0F1] dark:bg-[#18191B]">
       <div className="relative mx-auto max-w-[1440px] px-[96px]">
         <HeadingRow />
         <SkillsRow />

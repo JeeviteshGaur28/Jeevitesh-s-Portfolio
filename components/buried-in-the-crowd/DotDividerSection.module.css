@@ -1,0 +1,45 @@
+.section {
+  position: relative;
+  width: 1439px;
+  height: 349px;
+  background: #48382f;
+}
+
+.dots {
+  position: absolute;
+  left: 16px;
+  top: 208px;
+  width: 1406px;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cluster {
+  position: relative;
+  width: 134.479px;
+  height: 90.432px;
+  flex: none;
+}
+
+.columns {
+  position: absolute;
+  left: 22.0235px;
+  top: -22.0235px;
+  width: 90.432px;
+  height: 134.479px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.columns img {
+  width: 11.358px;
+  height: 134.479px;
+  max-width: none;
+  display: block;
+  flex: none;
+}

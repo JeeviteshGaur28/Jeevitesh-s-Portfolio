@@ -1,0 +1,250 @@
+.definition,
+.formation,
+.pathSection {
+  position: relative;
+  overflow: hidden;
+  background: #e9e4d7;
+  color: #48382f;
+}
+
+.definition {
+  width: 1444px;
+  height: 326px;
+}
+
+.definitionTitle,
+.formationTitle {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  color: #48382f;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+  font-variation-settings: "SOFT" 0, "WONK" 1;
+  line-height: 50px;
+}
+
+.definitionTitle {
+  left: 446px;
+  top: 49px;
+  width: 222px;
+  height: 87px;
+}
+
+.definitionTitle span {
+  width: 142px;
+  height: 39px;
+  font-size: 32px;
+}
+
+.definitionTitle h2,
+.formationTitle h2 {
+  margin: 0;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+.definitionTitle h2 {
+  width: 222px;
+  height: 44px;
+}
+
+.definitionDivider,
+.formationDivider {
+  position: absolute;
+  display: block;
+  max-width: none;
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+.definitionDivider {
+  left: 652.5px;
+  top: 134px;
+  width: 135px;
+  height: 3px;
+}
+
+.definitionCopy {
+  position: absolute;
+  left: 778px;
+  top: 49px;
+  width: 503px;
+  height: 228px;
+  color: #48382f;
+  font-family: var(--font-lato), Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.definitionCopy p,
+.definitionCopy strong {
+  width: 503px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.definitionCopy p {
+  height: 155px;
+  font-weight: 400;
+}
+
+.definitionCopy strong {
+  height: 73px;
+  font-weight: 700;
+}
+
+.formation {
+  width: 1439px;
+  height: 311px;
+}
+
+.formationTitle {
+  left: 284px;
+  top: 100px;
+  width: 379px;
+  height: 132px;
+  text-align: right;
+}
+
+.formationTitle span {
+  width: 100px;
+  height: 39px;
+  font-size: 32px;
+}
+
+.formationTitle h2 {
+  width: 379px;
+  height: 89px;
+}
+
+.formationDivider {
+  left: 662px;
+  top: 164.5px;
+  width: 116px;
+  height: 3px;
+}
+
+.formationCopy {
+  position: absolute;
+  left: 777px;
+  top: 125px;
+  width: 503px;
+  height: 82px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  color: #48382f;
+  font-family: var(--font-lato), Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.pathSection {
+  width: 1444px;
+  height: 811px;
+}
+
+.path {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 87px;
+  width: 1440px;
+  height: 565px;
+  max-width: none;
+  display: block;
+}
+
+.pathCopy {
+  position: absolute;
+  z-index: 1;
+  font-family: var(--font-lato), Arial, sans-serif;
+  font-style: normal;
+  line-height: normal;
+}
+
+.pathCopy h3,
+.pathCopy p {
+  margin: 0;
+}
+
+.pathCopy h3 {
+  color: #7a6a5f;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.pathCopy p {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.prePanic {
+  left: 79px;
+  top: 272px;
+  width: 217px;
+}
+
+.prePanic h3 { height: 38px; }
+.prePanic p { height: 130px; margin-top: 10px; display: flex; align-items: center; }
+
+.trigger {
+  left: 392px;
+  top: 237px;
+  width: 249px;
+}
+
+.trigger p { height: 84px; display: flex; align-items: center; }
+.trigger h3 { height: 60px; margin-top: 10px; display: flex; align-items: center; }
+
+.contagion {
+  left: 610px;
+  top: 393px;
+  width: 275px;
+}
+
+.contagion h3 { height: 38px; }
+.contagion p { height: 143px; margin-top: 10px; display: flex; align-items: center; }
+
+.loss {
+  left: 775px;
+  top: 46px;
+  width: 248px;
+}
+
+.loss p { width: 248px; height: 98px; display: flex; align-items: center; }
+.loss h3 { width: 232px; height: 71px; margin-top: 10px; display: flex; align-items: center; }
+
+.crush {
+  left: 934px;
+  top: 532px;
+  width: 225px;
+  text-align: center;
+}
+
+.crush h3 { width: 138px; height: 53px; margin: 0 auto; display: flex; align-items: center; justify-content: center; }
+.crush p { width: 225px; height: 119px; margin-top: 83px; display: flex; align-items: center; }
+
+.aftermath {
+  left: 1092px;
+  top: 153px;
+  width: 223px;
+  text-align: right;
+}
+
+.aftermath p { width: 223px; height: 96px; display: flex; align-items: center; }
+.aftermath h3 { width: 223px; height: 47px; margin-top: 2px; display: flex; align-items: center; justify-content: flex-end; }

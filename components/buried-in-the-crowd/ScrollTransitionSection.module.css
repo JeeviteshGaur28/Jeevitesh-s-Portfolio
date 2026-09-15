@@ -1,0 +1,132 @@
+.section {
+  position: relative;
+  width: 1439px;
+  height: 916px;
+  overflow: visible;
+  background: #e9e4d7;
+}
+
+.leftRule,
+.rightRule,
+.scrollDots {
+  position: absolute;
+  display: block;
+  max-width: none;
+}
+
+.leftRule {
+  left: 144px;
+  top: 157px;
+  width: 447.002px;
+  height: 10px;
+}
+
+.rightRule {
+  left: 877px;
+  top: 158px;
+  width: 428px;
+  height: 10px;
+}
+
+.prompt {
+  position: absolute;
+  left: 527px;
+  top: 136px;
+  width: 399px;
+  height: 94px;
+  text-align: center;
+}
+
+.prompt p {
+  width: 399px;
+  height: 50px;
+  margin: 0 0 -6px;
+  color: #48382f;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  font-variation-settings: "SOFT" 0, "WONK" 1;
+  line-height: 50px;
+}
+
+.prompt strong {
+  width: 337px;
+  height: 50px;
+  margin: 0 auto;
+  display: block;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: var(--font-lato), Arial, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 10px;
+  line-height: 50px;
+  white-space: nowrap;
+}
+
+.mouse {
+  position: absolute;
+  left: 707px;
+  top: 261px;
+  width: 32.281px;
+  height: 52.237px;
+  border-radius: 27px;
+  background: #bdad9c;
+}
+
+.mouse i {
+  position: absolute;
+  left: 13.5px;
+  top: 11.15px;
+  width: 5.869px;
+  height: 12.913px;
+  border-radius: 27px;
+  background: #48382f;
+}
+
+.scrollDots {
+  left: 713px;
+  top: 413px;
+  width: 20px;
+  height: 385px;
+}
+
+.crowdCrop {
+  position: absolute;
+  left: 0;
+  top: 440px;
+  width: 948px;
+  height: 426px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.crowdCrop img {
+  position: absolute;
+  left: 0;
+  top: -73.9%;
+  width: 117.08%;
+  height: 173.9%;
+  max-width: none;
+}
+
+.armCrop {
+  position: absolute;
+  left: 1110px;
+  top: 165px;
+  width: 349px;
+  height: 322px;
+  overflow: hidden;
+  border-radius: 32px;
+  pointer-events: none;
+}
+
+.armCrop img {
+  position: absolute;
+  left: -124.61%;
+  top: 0;
+  width: 240.74%;
+  height: 173.9%;
+  max-width: none;
+}

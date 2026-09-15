@@ -1,0 +1,174 @@
+
+> kuldhara-case-study@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.5
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 1782ms
+ ○ Compiling /work/buried-in-the-crowd ...
+ ✓ Compiled /work/buried-in-the-crowd in 1536ms (1242 modules)
+ GET /work/buried-in-the-crowd 200 in 1786ms
+ GET /work/buried-in-the-crowd 200 in 57ms
+ GET /work/buried-in-the-crowd 200 in 78ms
+ GET /work/buried-in-the-crowd 200 in 43ms
+ ✓ Compiled in 1395ms (1256 modules)
+ ✓ Compiled in 320ms (1265 modules)
+ ✓ Compiled in 214ms (1265 modules)
+ GET /work/buried-in-the-crowd 200 in 74ms
+ ✓ Compiled in 239ms (1256 modules)
+ GET /work/buried-in-the-crowd 200 in 84ms
+ GET /work/buried-in-the-crowd 200 in 37ms
+ ✓ Compiled in 317ms (1256 modules)
+ ✓ Compiled in 181ms (1265 modules)
+ GET /work/buried-in-the-crowd 200 in 87ms
+ ✓ Compiled in 526ms (471 modules)
+ GET /work/buried-in-the-crowd 200 in 89ms
+ ✓ Compiled in 426ms (481 modules)
+ ✓ Compiled in 518ms (503 modules)
+ ✓ Compiled in 743ms (1360 modules)
+ GET /work/buried-in-the-crowd 200 in 110ms
+ ✓ Compiled in 277ms (1256 modules)
+ GET /work/buried-in-the-crowd 200 in 92ms
+ ✓ Compiled in 328ms (1259 modules)
+ ✓ Compiled in 191ms (639 modules)
+ ✓ Compiled in 147ms (639 modules)
+ ✓ Compiled in 115ms (639 modules)
+ ✓ Compiled in 120ms (639 modules)
+ ✓ Compiled in 225ms (1268 modules)
+ ✓ Compiled in 126ms (639 modules)
+ GET /work/buried-in-the-crowd 200 in 89ms
+ GET /work/buried-in-the-crowd 200 in 32ms
+ ✓ Compiled in 143ms (639 modules)
+ GET /work/buried-in-the-crowd 200 in 71ms
+ ✓ Compiled in 159ms (639 modules)
+ ✓ Compiled in 190ms (639 modules)
+ ✓ Compiled in 155ms (639 modules)
+ ✓ Compiled in 168ms (639 modules)
+ ✓ Compiled in 153ms (639 modules)
+ ✓ Compiled in 84ms (639 modules)
+ ✓ Compiled in 216ms (639 modules)
+ GET /work/buried-in-the-crowd 200 in 47ms
+ ○ Compiling /work/kuldhara ...
+ ✓ Compiled /work/kuldhara in 771ms (1309 modules)
+ GET /work/kuldhara 200 in 960ms
+ ✓ Compiled in 208ms (662 modules)
+ ✓ Compiled in 192ms (662 modules)
+ ✓ Compiled in 142ms (662 modules)
+ ✓ Compiled in 95ms (662 modules)
+ ✓ Compiled in 86ms (662 modules)
+ ✓ Compiled in 119ms (662 modules)
+ ✓ Compiled in 156ms (662 modules)
+ ✓ Compiled in 173ms (662 modules)
+ ✓ Compiled in 212ms (1323 modules)
+ ✓ Compiled in 117ms (662 modules)
+ ✓ Compiled in 175ms (1323 modules)
+ ✓ Compiled in 90ms (662 modules)
+ ✓ Compiled /_not-found in 161ms (1312 modules)
+ GET /work/kuldhara 404 in 243ms
+ ✓ Compiled in 168ms (664 modules)
+ GET /_next/static/css/app/layout.css?v=1789514447917 404 in 68ms
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514447917 404 in 69ms
+ GET /_next/static/css/app/layout.css?v=1789514447937 404 in 71ms
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514447916 404 in 69ms
+ GET /_next/static/css/app/layout.css?v=1789514447916 404 in 71ms
+ ✓ Compiled in 149ms (664 modules)
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514471423 404 in 31ms
+ GET /_next/static/css/app/layout.css?v=1789514471423 404 in 33ms
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514471423 404 in 32ms
+ GET /_next/static/css/app/layout.css?v=1789514471423 404 in 33ms
+ GET /_next/static/css/app/layout.css?v=1789514471433 404 in 31ms
+ ✓ Compiled in 151ms (664 modules)
+ GET /_next/static/css/app/layout.css?v=1789514487877 404 in 36ms
+ GET /_next/static/css/app/layout.css?v=1789514487877 404 in 40ms
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514487877 404 in 40ms
+ GET /_next/static/css/app/layout.css?v=1789514487895 404 in 39ms
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514487877 404 in 40ms
+ ✓ Compiled in 206ms (664 modules)
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514507484 404 in 26ms
+ GET /_next/static/css/app/layout.css?v=1789514507484 404 in 28ms
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514507484 404 in 29ms
+ GET /_next/static/css/app/layout.css?v=1789514507484 404 in 30ms
+ GET /_next/static/css/app/layout.css?v=1789514507502 404 in 34ms
+ ✓ Compiled in 149ms (664 modules)
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 774ms (1536 modules)
+ GET /_next/static/css/app/layout.css?v=1789514526685 404 in 27ms
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514526685 404 in 29ms
+ GET /_next/static/css/app/layout.css?v=1789514526761 404 in 39ms
+ GET /_next/static/css/app/layout.css?v=1789514526794 404 in 36ms
+ GET /work/buried-in-the-crowd 200 in 215ms
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514526794 404 in 42ms
+ GET /_next/static/chunks/main-app.js?v=1789514526685 404 in 60ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 61ms
+ GET /_next/static/chunks/app/work/buried-in-the-crowd/page.js 404 in 62ms
+ GET /work/kuldhara 200 in 234ms
+ GET /work/buried-in-the-crowd 200 in 202ms
+ GET /_next/static/chunks/main-app.js?v=1789514526761 404 in 44ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 41ms
+ GET /_next/static/chunks/app/work/kuldhara/page.js 404 in 48ms
+ GET /_next/static/chunks/main-app.js?v=1789514526794 404 in 33ms
+ GET /_next/static/chunks/app/work/buried-in-the-crowd/page.js 404 in 29ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 21ms
+ GET /work/kuldhara 200 in 23ms
+ ✓ Compiled in 184ms (847 modules)
+ GET /work/buried-in-the-crowd 200 in 50ms
+ GET /_next/static/css/app/layout.css?v=1789514543941 404 in 14ms
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514543941 404 in 14ms
+ GET /_next/static/chunks/main-app.js?v=1789514543941 404 in 16ms
+ GET /_next/static/chunks/app/work/buried-in-the-crowd/page.js 404 in 17ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 17ms
+ GET /work/buried-in-the-crowd 200 in 39ms
+ GET /_next/static/css/app/layout.css?v=1789514544652 404 in 13ms
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514544652 404 in 13ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 15ms
+ GET /_next/static/chunks/main-app.js?v=1789514544652 404 in 16ms
+ GET /_next/static/chunks/app/work/buried-in-the-crowd/page.js 404 in 16ms
+ ✓ Compiled in 132ms (847 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 512ms (1608 modules)
+ GET / 200 in 647ms
+ ✓ Compiled in 244ms (1582 modules)
+ ✓ Compiled in 227ms (1582 modules)
+ GET /work/buried-in-the-crowd 200 in 93ms
+ ✓ Compiled /_not-found in 129ms (1571 modules)
+ GET /_next/static/css/app/layout.css?v=1789514628992 404 in 191ms
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514628992 404 in 193ms
+ GET /_next/static/chunks/main-app.js?v=1789514628992 404 in 175ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 138ms
+ GET /_next/static/chunks/app/work/buried-in-the-crowd/page.js 404 in 15ms
+ GET /work/kuldhara 200 in 91ms
+ GET /_next/static/css/app/layout.css?v=1789514637314 404 in 21ms
+ GET /_next/static/chunks/main-app.js?v=1789514637314 404 in 29ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 30ms
+ GET /work/buried-in-the-crowd 200 in 56ms
+ GET /_next/static/css/app/layout.css?v=1789514671635 404 in 38ms
+ GET /_next/static/css/app/work/buried-in-the-crowd/page.css?v=1789514671635 404 in 40ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 24ms
+ GET /_next/static/chunks/app/work/buried-in-the-crowd/page.js 404 in 23ms
+ GET /_next/static/chunks/main-app.js?v=1789514671635 404 in 23ms
+ GET / 200 in 81ms
+ GET /_next/static/css/app/layout.css?v=1789514737926 404 in 18ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 23ms
+ GET /_next/static/chunks/main-app.js?v=1789514737926 404 in 26ms
+ GET / 200 in 45ms
+ GET /_next/static/css/app/layout.css?v=1789514836396 404 in 11ms
+ GET /_next/static/chunks/main-app.js?v=1789514836396 404 in 17ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 16ms
+ ○ Compiling /work/vasna ...
+ ✓ Compiled /work/vasna in 640ms (1592 modules)
+ GET /work/vasna 200 in 819ms
+ ✓ Compiled /_not-found in 231ms (1581 modules)
+ GET /_next/static/css/app/layout.css?v=1789514956490 404 in 324ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 298ms
+ GET /_next/static/chunks/main-app.js?v=1789514956490 404 in 309ms
+ ✓ Compiled / in 143ms (721 modules)
+ GET / 200 in 329ms
+ ✓ Compiled /_not-found in 363ms (1588 modules)
+ GET /_next/static/css/app/layout.css?v=1789515173783 404 in 443ms
+ GET /_next/static/chunks/main-app.js?v=1789515173783 404 in 433ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 433ms
+ GET / 200 in 58ms
+ GET / 200 in 61ms
+ GET /_next/static/css/app/layout.css?v=1789515264548 404 in 70ms

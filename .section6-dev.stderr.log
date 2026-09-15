@@ -1,0 +1,127 @@
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\motion-utils.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/motion-utils' in C:\Users\Admin\Desktop\Portfolio\.next\server for build dependencies doesn't lead to expected result 'C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\motion-utils.js', but to 'Error: Can't resolve './vendor-chunks/motion-utils' in 'C:\Users\Admin\Desktop\Portfolio\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/motion-utils (expected C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\motion-utils.js)
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\app\_not-found\page.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\app\_not-found\page.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/motion-dom' in C:\Users\Admin\Desktop\Portfolio\.next\server for build dependencies doesn't lead to expected result 'C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\motion-dom.js', but to 'Error: Can't resolve './vendor-chunks/motion-dom' in 'C:\Users\Admin\Desktop\Portfolio\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/motion-dom (expected C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\motion-dom.js)
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\app\_not-found\page.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\app\_not-found\page.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/framer-motion' in C:\Users\Admin\Desktop\Portfolio\.next\server for build dependencies doesn't lead to expected result 'C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\framer-motion.js', but to 'Error: Can't resolve './vendor-chunks/framer-motion' in 'C:\Users\Admin\Desktop\Portfolio\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/framer-motion (expected C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\framer-motion.js)
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\app\_not-found\page.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\app\_not-found\page.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\motion-utils.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/motion-utils' in C:\Users\Admin\Desktop\Portfolio\.next\server for build dependencies doesn't lead to expected result 'C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\motion-utils.js', but to 'Error: Can't resolve './vendor-chunks/motion-utils' in 'C:\Users\Admin\Desktop\Portfolio\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/motion-utils (expected C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\motion-utils.js)
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\app\work\buried-in-the-crowd\page.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\app\work\buried-in-the-crowd\page.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/motion-dom' in C:\Users\Admin\Desktop\Portfolio\.next\server for build dependencies doesn't lead to expected result 'C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\motion-dom.js', but to 'Error: Can't resolve './vendor-chunks/motion-dom' in 'C:\Users\Admin\Desktop\Portfolio\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/motion-dom (expected C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\motion-dom.js)
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\app\work\buried-in-the-crowd\page.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\app\work\buried-in-the-crowd\page.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/framer-motion' in C:\Users\Admin\Desktop\Portfolio\.next\server for build dependencies doesn't lead to expected result 'C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\framer-motion.js', but to 'Error: Can't resolve './vendor-chunks/framer-motion' in 'C:\Users\Admin\Desktop\Portfolio\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/framer-motion (expected C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\framer-motion.js)
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\app\work\buried-in-the-crowd\page.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\app\work\buried-in-the-crowd\page.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\next-themes.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/next-themes' in C:\Users\Admin\Desktop\Portfolio\.next\server for build dependencies doesn't lead to expected result 'C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\next-themes.js', but to 'Error: Can't resolve './vendor-chunks/next-themes' in 'C:\Users\Admin\Desktop\Portfolio\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/next-themes (expected C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\next-themes.js)
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\app\page.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\app\page.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\next-themes.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/next-themes' in C:\Users\Admin\Desktop\Portfolio\.next\server for build dependencies doesn't lead to expected result 'C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\next-themes.js', but to 'Error: Can't resolve './vendor-chunks/next-themes' in 'C:\Users\Admin\Desktop\Portfolio\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/next-themes (expected C:\Users\Admin\Desktop\Portfolio\.next\server\vendor-chunks\next-themes.js)
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\.next\server\app\_not-found\page.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\.next\server\app\_not-found\page.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\Admin\Desktop\Portfolio\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js

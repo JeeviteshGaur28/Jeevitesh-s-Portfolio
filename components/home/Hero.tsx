@@ -2,16 +2,17 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTheme } from "next-themes";
 import styles from "./Hero.module.css";
 import { AudioPlayer } from "./AudioPlayer";
 
 const pillClass =
-  "flex shrink-0 items-center justify-center rounded-[98px] bg-[#EFF0F1] px-[28px] py-[16px] shadow-[10px_10px_20px_0px_rgba(24,25,27,0.18),-10px_-10px_20px_0px_rgba(255,255,255,0.95)]";
+  "flex shrink-0 items-center justify-center rounded-[98px] bg-[#EFF0F1] px-[28px] py-[16px] shadow-[10px_10px_20px_0px_rgba(24,25,27,0.18),-10px_-10px_20px_0px_rgba(255,255,255,0.95)] dark:bg-[#18191B] dark:shadow-[5px_5px_10px_0px_rgba(0,0,0,0.7),-5px_-5px_10px_0px_rgba(82,87,94,0.55)]";
 
 function PortfolioBadge() {
   return (
     <div className={pillClass}>
-      <p className="whitespace-nowrap font-mono text-[18px] font-bold tracking-[-0.1px] text-[#18191B]">
+      <p className="whitespace-nowrap font-mono text-[18px] font-bold tracking-[-0.1px] text-[#18191B] dark:text-[#EFF0F1]">
         PORTFOLIO
       </p>
     </div>
@@ -21,19 +22,30 @@ function PortfolioBadge() {
 // Item 5: split the flat Figma toggle export into an independently
 // animatable track + thumb. Track keeps the original gradients/filters;
 // the thumb is a separate full-size SVG layer that slides via
-// `transform: translateX()`. Visual-only for now, no theme is wired up.
+// `transform: translateX()`. Wired to next-themes: "on" (thumb right,
+// moon visible) = dark mode; "off" (thumb left) = light mode, which is
+// also the default for every new visitor.
 const TOGGLE_ON_X = 0;
 const TOGGLE_OFF_X = -21.76;
 
 function ThemeToggle() {
-  const [isOn, setIsOn] = useState(true);
+  // `theme` is undefined on the very first client render (next-themes
+  // hasn't read localStorage into React state yet, even though the actual
+  // <html> class is already correct via its blocking inline script) - the
+  // `mounted` guard keeps this component's own visual state matching the
+  // real default (light / "off") until that first effect runs, so there's
+  // no mismatched flash of the thumb jumping position after hydration.
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  const isOn = mounted && resolvedTheme === "dark";
 
   return (
     <button
       type="button"
-      aria-label="Toggle theme"
+      aria-label="Toggle dark mode"
       aria-pressed={isOn}
-      onClick={() => setIsOn((v) => !v)}
+      onClick={() => setTheme(isOn ? "light" : "dark")}
       className="relative h-[31px] w-[53.842px] shrink-0 cursor-pointer border-none bg-transparent p-0"
     >
       <span
@@ -170,7 +182,7 @@ function Eyebrow() {
   return (
     <div className="flex items-baseline gap-[8px]">
       <span className="h-[8px] w-[8px] shrink-0 bg-[#FE5B2A] opacity-80" />
-      <p className="whitespace-nowrap font-outfit text-[20px] uppercase tracking-[1px] text-[#18191B]">
+      <p className="whitespace-nowrap font-outfit text-[20px] uppercase tracking-[1px] text-[#18191B] dark:text-[#EFF0F1]">
         Hi ! I&rsquo;m Jeevitesh Gaur. A&mdash;
       </p>
     </div>
@@ -217,7 +229,7 @@ function SwappingWord() {
   );
 }
 
-const headlineTextClass = `${styles.headlineText} font-bricolage text-[100px] font-medium leading-[1.001] tracking-[1px] text-[#0C0C0C]`;
+const headlineTextClass = `${styles.headlineText} font-bricolage text-[100px] font-medium leading-[1.001] tracking-[1px] text-[#0C0C0C] dark:text-[#EFF0F1]`;
 const headlineTextStyle = { fontVariationSettings: '"opsz" 14, "wdth" 100' } as const;
 
 // Headline is two rows sharing one right edge, matching Figma: row 1 is
@@ -275,7 +287,7 @@ function Headline() {
 function LocationPill() {
   return (
     <div className={pillClass}>
-      <p className="whitespace-nowrap font-mono text-[15px] tracking-[-0.1px] text-[#18191B]">
+      <p className="whitespace-nowrap font-mono text-[15px] tracking-[-0.1px] text-[#18191B] dark:text-[#EFF0F1]">
         Ahmedabad, Gujarat
       </p>
     </div>
@@ -285,7 +297,7 @@ function LocationPill() {
 function GradYearPill() {
   return (
     <div className={pillClass}>
-      <p className="whitespace-nowrap font-mono text-[15px] tracking-[-0.1px] text-[#18191B]">
+      <p className="whitespace-nowrap font-mono text-[15px] tracking-[-0.1px] text-[#18191B] dark:text-[#EFF0F1]">
         Graduating 2027
       </p>
     </div>
@@ -355,13 +367,22 @@ function HeroPhoto() {
 //   Nav bar  x=598 y=793 w=244 h=78     -> bottom (900-871)/900 = 3.22%, centered
 export function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden bg-[#EFF0F1]">
-      {/* Item 1: plus-grid background, reusing the loading screen's asset at 20% opacity */}
+    <section className="relative h-screen overflow-hidden bg-[#EFF0F1] dark:bg-[#18191B]">
+      {/* Item 1: plus-grid background, reusing the loading screen's asset at
+          20% opacity. Dark mode swaps to a real dark-mode export from
+          Figma (not just a CSS filter) - it's a different tile, not the
+          same lines recolored - and is already composited at the right
+          subtlety, so it renders at full opacity, not 20%. */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <img
           src="/images/plus-grid.png"
           alt=""
-          className="absolute left-0 top-0 h-full w-[112.5%] object-cover opacity-20"
+          className="absolute left-0 top-0 h-full w-[112.5%] object-cover opacity-20 dark:hidden"
+        />
+        <img
+          src="/images/plus-grid-dark.png"
+          alt=""
+          className="absolute left-0 top-0 hidden h-full w-[112.5%] object-cover dark:block"
         />
       </div>
 

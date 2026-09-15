@@ -3,34 +3,39 @@
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
+// Dark mode uses genuinely different icon assets (monochrome light glyphs
+// pulled from the dark Figma frame), not a CSS recolor - the light-mode
+// icons are full-color brand logos that wouldn't read the same way
+// inverted.
 const TOOLS = [
-  { name: "Figma", src: "/images/loadout/figma.svg" },
-  { name: "Claude", src: "/images/loadout/claude.svg" },
-  { name: "Illustrator", src: "/images/loadout/illustrator.svg" },
-  { name: "Photoshop", src: "/images/loadout/photoshop.svg" },
-  { name: "After Effects", src: "/images/loadout/aftereffects.svg" },
-  { name: "Premiere Pro", src: "/images/loadout/premiere.svg" },
-  { name: "Notion", src: "/images/loadout/notion.svg" },
-  { name: "Miro", src: "/images/loadout/miro.svg" },
-  { name: "Unity", src: "/images/loadout/unity.svg" },
-  { name: "Blender", src: "/images/loadout/blender.svg" },
-  { name: "GitHub", src: "/images/loadout/github.svg" },
-  { name: "Autodesk", src: "/images/loadout/autodesk.svg" },
-  { name: "Arduino", src: "/images/loadout/arduino.svg" },
-  { name: "Raspberry Pi", src: "/images/loadout/raspberrypi.svg" },
-  { name: "React", src: "/images/loadout/react.svg" },
-  { name: "VS Code", src: "/images/loadout/vscode.svg" },
-  { name: "Claude Code", src: "/images/loadout/claudecode.svg" },
+  { name: "Figma", src: "/images/loadout/figma.svg", darkSrc: "/images/loadout/figma-dark.svg" },
+  { name: "Claude", src: "/images/loadout/claude.svg", darkSrc: "/images/loadout/claude-dark.svg" },
+  { name: "Illustrator", src: "/images/loadout/illustrator.svg", darkSrc: "/images/loadout/illustrator-dark.svg" },
+  { name: "Photoshop", src: "/images/loadout/photoshop.svg", darkSrc: "/images/loadout/photoshop-dark.svg" },
+  { name: "After Effects", src: "/images/loadout/aftereffects.svg", darkSrc: "/images/loadout/aftereffects-dark.svg" },
+  { name: "Premiere Pro", src: "/images/loadout/premiere.svg", darkSrc: "/images/loadout/premiere-dark.svg" },
+  { name: "Notion", src: "/images/loadout/notion.svg", darkSrc: "/images/loadout/notion-dark.svg" },
+  { name: "Miro", src: "/images/loadout/miro.svg", darkSrc: "/images/loadout/miro-dark.svg" },
+  { name: "Unity", src: "/images/loadout/unity.svg", darkSrc: "/images/loadout/unity-dark.svg" },
+  { name: "Blender", src: "/images/loadout/blender.svg", darkSrc: "/images/loadout/blender-dark.svg" },
+  { name: "GitHub", src: "/images/loadout/github.svg", darkSrc: "/images/loadout/github-dark.svg" },
+  { name: "Autodesk", src: "/images/loadout/autodesk.svg", darkSrc: "/images/loadout/autodesk-dark.svg" },
+  { name: "Arduino", src: "/images/loadout/arduino.svg", darkSrc: "/images/loadout/arduino-dark.svg" },
+  { name: "Raspberry Pi", src: "/images/loadout/raspberrypi.svg", darkSrc: "/images/loadout/raspberrypi-dark.svg" },
+  { name: "React", src: "/images/loadout/react.svg", darkSrc: "/images/loadout/react-dark.svg" },
+  { name: "VS Code", src: "/images/loadout/vscode.svg", darkSrc: "/images/loadout/vscode-dark.svg" },
+  { name: "Claude Code", src: "/images/loadout/claudecode.svg", darkSrc: "/images/loadout/claudecode-dark.svg" },
 ];
 
 // Not specified in Figma - a comfortable readable auto-scroll pace.
 const NORMAL_SPEED = 65; // px/sec
 const SLOW_SPEED = 16; // px/sec, on hover - slows, never pauses/reverses
 
-function ToolCard({ name, src }: { name: string; src: string }) {
+function ToolCard({ name, src, darkSrc }: { name: string; src: string; darkSrc: string }) {
   return (
-    <div className="flex h-[65px] w-[65px] shrink-0 items-center justify-center rounded-[8.421px] bg-[#EFF0F1] p-[6px] shadow-[2.526px_2.526px_5.895px_0px_rgba(24,25,27,0.16),-2.526px_-2.526px_5.895px_0px_rgba(255,255,255,0.9)]">
-      <img src={src} alt={name} className="max-h-full max-w-full object-contain" />
+    <div className="flex h-[65px] w-[65px] shrink-0 items-center justify-center rounded-[8.421px] bg-[#EFF0F1] p-[6px] shadow-[2.526px_2.526px_5.895px_0px_rgba(24,25,27,0.16),-2.526px_-2.526px_5.895px_0px_rgba(255,255,255,0.9)] dark:bg-[#18191B] dark:shadow-[5px_5px_10px_0px_rgba(0,0,0,0.7),-5px_-5px_10px_0px_rgba(82,87,94,0.55)]">
+      <img src={src} alt={name} className="max-h-full max-w-full object-contain dark:hidden" />
+      <img src={darkSrc} alt={name} className="hidden max-h-full max-w-full object-contain dark:block" />
     </div>
   );
 }
@@ -85,12 +90,12 @@ function Marquee() {
     >
       <div ref={trackRef} className="absolute left-0 top-0 flex items-center gap-[30px]" style={{ willChange: "transform" }}>
         {[...TOOLS, ...TOOLS].map((tool, i) => (
-          <ToolCard key={`${tool.name}-${i}`} name={tool.name} src={tool.src} />
+          <ToolCard key={`${tool.name}-${i}`} name={tool.name} src={tool.src} darkSrc={tool.darkSrc} />
         ))}
       </div>
       {/* Fade masks - left/right, exactly as Figma has them */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-[90px] bg-gradient-to-r from-[#EFF0F1] to-[rgba(239,240,241,0.62)]" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-[90px] bg-gradient-to-l from-[#EFF0F1] to-[rgba(239,240,241,0.6)]" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-[90px] bg-gradient-to-r from-[#EFF0F1] to-[rgba(239,240,241,0.62)] dark:from-[#18191B] dark:to-[rgba(24,25,27,0.62)]" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-[90px] bg-gradient-to-l from-[#EFF0F1] to-[rgba(239,240,241,0.6)] dark:from-[#18191B] dark:to-[rgba(24,25,27,0.6)]" />
     </div>
   );
 }
@@ -113,7 +118,7 @@ export function Loadout() {
     >
       <div className="flex items-end gap-[9px] pb-[68px] pl-[27px]">
         <h2
-          className="whitespace-nowrap font-bricolage text-[52px] leading-[52.275px] tracking-[-1.792px] text-[#0C0C0C]"
+          className="whitespace-nowrap font-bricolage text-[52px] leading-[52.275px] tracking-[-1.792px] text-[#0C0C0C] dark:text-[#EFF0F1]"
           style={{ fontVariationSettings: '"opsz" 14, "wdth" 100' }}
         >
           Loadout

@@ -1,0 +1,245 @@
+.legendSection,
+.findingsSection {
+  position: relative;
+  width: 1440px;
+  overflow: hidden;
+  background: #e9e4d7;
+  color: #48382f;
+}
+
+.legendSection {
+  height: 396px;
+}
+
+.legendLayout {
+  position: absolute;
+  left: 329px;
+  top: 128px;
+  width: 789px;
+  height: 184px;
+}
+
+.legendLayout > h2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 330px;
+  height: 184px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  color: #48382f;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 700;
+  font-variation-settings: "SOFT" 0, "WONK" 1;
+  line-height: 50px;
+  text-align: right;
+}
+
+.legendDivider {
+  position: absolute;
+  left: 390px;
+  top: 4px;
+  width: 3px;
+  height: 94px;
+  background: #7a6a5f;
+}
+
+.legendCopy {
+  position: absolute;
+  left: 446px;
+  top: 0;
+  width: 343px;
+  height: 184px;
+  color: #48382f;
+  font-family: var(--font-lato), Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.legendCopy > div {
+  width: 333px;
+  height: 84px;
+}
+
+.legendCopy h3 {
+  width: 333px;
+  height: 24px;
+  margin: 0;
+  font-family: var(--font-lato), Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.legendCopy p {
+  margin: 0;
+}
+
+.legendCopy > div p {
+  width: 333px;
+  margin-top: 22px;
+}
+
+.arrowKey {
+  position: absolute;
+  left: 0;
+  top: 108px;
+  width: 343px;
+  height: 76px;
+}
+
+.red { color: #ff4646; }
+.green { color: #25ac00; }
+
+.findingsSection {
+  height: 1525px;
+}
+
+.findingsTitle {
+  position: absolute;
+  left: 368px;
+  top: 44px;
+  width: 297px;
+  height: 138px;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+  font-variation-settings: "SOFT" 0, "WONK" 1;
+  line-height: 1;
+}
+
+.findingsTitle span,
+.findingsTitle h2,
+.findingsTitle em {
+  position: absolute;
+  display: block;
+  margin: 0;
+  font-family: inherit;
+  font-style: italic;
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.findingsTitle span {
+  left: 230px;
+  top: 0;
+  width: 67px;
+  height: 42px;
+  color: rgba(122, 106, 95, 0.6);
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.findingsTitle h2 {
+  left: 96px;
+  top: 47px;
+  width: 201px;
+  height: 48px;
+  color: #48382f;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.findingsTitle em {
+  left: 0;
+  top: 100px;
+  width: 297px;
+  height: 38px;
+  color: rgba(122, 106, 95, 0.6);
+  font-size: 36px;
+  line-height: 38px;
+}
+
+.titleDivider {
+  position: absolute;
+  left: 718.5px;
+  top: 70px;
+  width: 3px;
+  height: 116px;
+  background: #7a6a5f;
+}
+
+.findingsGrid {
+  position: absolute;
+  left: 235px;
+  top: 286px;
+  width: 977px;
+  height: 1153px;
+  display: grid;
+  grid-template-columns: 433px 433px;
+  grid-template-rows: repeat(3, 351px);
+  column-gap: 107px;
+  row-gap: 50px;
+}
+
+.findingCard {
+  position: relative;
+  width: 433px;
+  height: 351px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #cabdad;
+}
+
+.findingCard > b {
+  position: absolute;
+  left: 11px;
+  top: 0;
+  width: 124px;
+  height: 105px;
+  color: rgba(238, 233, 221, 0.5);
+  font-family: var(--font-lato), Arial, sans-serif;
+  font-size: 96px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 105px;
+}
+
+.findingCard > div {
+  position: absolute;
+  left: 73px;
+  top: 63px;
+  width: 324px;
+}
+
+.findingCard h3 {
+  width: 304px;
+  margin: 0;
+  color: #48382f;
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 27px;
+  text-transform: uppercase;
+}
+
+.findingCard p {
+  width: 324px;
+  margin: 16px 0 0;
+  color: #48382f;
+  font-family: var(--font-lato), Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.findingCard:nth-child(2) p,
+.findingCard:nth-child(4) p {
+  width: 334px;
+}
+
+.findingCard:nth-child(6) h3 {
+  width: 324px;
+}
+
+.findingCard:nth-child(4) p {
+  margin-top: 9px;
+}

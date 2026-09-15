@@ -7,13 +7,13 @@ import Link from "next/link";
 // text role.
 const OPSZ = { fontVariationSettings: '"opsz" 14, "wdth" 100' } as const;
 const NEOMORPHIC_SHADOW =
-  "shadow-[10px_10px_20px_0px_rgba(24,25,27,0.18),-10px_-10px_20px_0px_rgba(255,255,255,0.95)]";
+  "shadow-[10px_10px_20px_0px_rgba(24,25,27,0.18),-10px_-10px_20px_0px_rgba(255,255,255,0.95)] dark:shadow-[5px_5px_10px_0px_rgba(0,0,0,0.7),-5px_-5px_10px_0px_rgba(82,87,94,0.55)]";
 
 function SectionHeading({ children, gap = "10px" }: { children: string; gap?: string }) {
   return (
     <div className="flex items-end" style={{ gap }}>
       <h2
-        className="whitespace-nowrap font-bricolage text-[52px] leading-[52.275px] tracking-[-1.792px] text-[#0C0C0C]"
+        className="whitespace-nowrap font-bricolage text-[52px] leading-[52.275px] tracking-[-1.792px] text-[#0C0C0C] dark:text-[#EFF0F1]"
         style={OPSZ}
       >
         {children}
@@ -25,7 +25,7 @@ function SectionHeading({ children, gap = "10px" }: { children: string; gap?: st
 
 function NeomorphicPill({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`flex shrink-0 items-center justify-center whitespace-nowrap rounded-[98px] bg-[#EFF0F1] px-[28px] py-[16px] ${NEOMORPHIC_SHADOW}`}>
+    <div className={`flex shrink-0 items-center justify-center whitespace-nowrap rounded-[98px] bg-[#EFF0F1] px-[28px] py-[16px] dark:bg-[#18191B] ${NEOMORPHIC_SHADOW}`}>
       {children}
     </div>
   );
@@ -63,7 +63,7 @@ function FilterPillsRow() {
     <div className="flex items-center gap-[43px] border-b-[0.8px] border-l-[0.8px] border-r-[0.8px] border-[#c3c4c8] pb-[49px] pl-[27px] pt-[46px]">
       {FILTER_PILLS.map((label) => (
         <NeomorphicPill key={label}>
-          <p className="font-bricolage text-[15px] font-medium text-[#18191B]" style={OPSZ}>
+          <p className="font-bricolage text-[15px] font-medium text-[#18191B] dark:text-[#EFF0F1]" style={OPSZ}>
             {label}
           </p>
         </NeomorphicPill>
@@ -88,17 +88,17 @@ function TestimonialCardsRow() {
       {SIDE_CARDS.map(({ left, z }) => (
         <div
           key={left}
-          className={`absolute flex h-[283px] w-[273px] items-center justify-center rounded-[32px] bg-[#EFF0F1] blur-[4px] ${NEOMORPHIC_SHADOW}`}
+          className={`absolute flex h-[283px] w-[273px] items-center justify-center rounded-[32px] bg-[#EFF0F1] blur-[4px] dark:bg-[#18191B] ${NEOMORPHIC_SHADOW}`}
           style={{ left, top: 170, zIndex: z }}
         >
-          <p className="whitespace-nowrap font-mono text-[15px] font-extrabold text-[#18191B]">coming soon</p>
+          <p className="whitespace-nowrap font-mono text-[15px] font-extrabold text-[#18191B] dark:text-[#EFF0F1]">coming soon</p>
         </div>
       ))}
       <div
-        className={`absolute z-[3] flex h-[409px] w-[395px] items-center justify-center rounded-[31px] bg-[#EFF0F1] ${NEOMORPHIC_SHADOW}`}
+        className={`absolute z-[3] flex h-[409px] w-[395px] items-center justify-center rounded-[31px] bg-[#EFF0F1] dark:bg-[#18191B] ${NEOMORPHIC_SHADOW}`}
         style={{ left: 407, top: 107 }}
       >
-        <p className="whitespace-nowrap font-mono text-[15px] font-extrabold text-[#18191B]">coming soon</p>
+        <p className="whitespace-nowrap font-mono text-[15px] font-extrabold text-[#18191B] dark:text-[#EFF0F1]">coming soon</p>
       </div>
     </div>
   );
@@ -111,7 +111,7 @@ function AboutRow() {
         <SectionHeading gap="12px">About</SectionHeading>
       </div>
       <div className="relative h-[535px] w-[670px] shrink-0 border-b-[0.8px] border-r-[0.8px] border-[#c3c4c8]">
-        <div className="flex w-[602px] flex-col gap-[12px] pl-[34px] pt-[69px] text-[20px] tracking-[-0.1px] text-black">
+        <div className="flex w-[602px] flex-col gap-[12px] pl-[34px] pt-[69px] text-[20px] tracking-[-0.1px] text-black dark:text-[#EFF0F1]">
           <p className="font-outfit font-medium">Hey there !</p>
           <p className="text-justify font-outfit">
             {`I'm Jeevitesh. I like taking things apart to understand how they work, questioning why they work the way they do, and designing how they could work better. My work sits at the intersection of interfaces, systems thinking and emerging tech - VR, computer vision, physical computing. I care less about how something looks and more about whether it works for the person using it.`}
@@ -134,16 +134,21 @@ function BackToTopRow() {
       <button
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="absolute flex h-[37px] w-[130.05px] items-center justify-center gap-[6px] rounded-[20px] border-[0.8px] border-[#121212] bg-[#EFF0F1] px-[14px] py-[10px]"
+        className="absolute flex h-[37px] w-[130.05px] items-center justify-center gap-[6px] rounded-[20px] border-[0.8px] border-[#121212] bg-[#EFF0F1] px-[14px] py-[10px] dark:border-[#EFF0F1] dark:bg-[#18191B]"
         style={{ left: 555.2, top: 104 }}
       >
         <span className="flex items-center gap-[11px]">
-          <span className="whitespace-nowrap font-outfit text-[14px] tracking-[0.2px] text-[#050505]">Back To Top</span>
+          <span className="whitespace-nowrap font-outfit text-[14px] tracking-[0.2px] text-[#050505] dark:text-[#EFF0F1]">Back To Top</span>
           <span className="flex h-[12.045px] w-[12.045px] items-center justify-center">
             <img
               src="/images/footer/back-to-top-arrow.svg"
               alt=""
-              className="h-[8.517px] w-[8.517px] rotate-[135deg]"
+              className="h-[8.517px] w-[8.517px] rotate-[135deg] dark:hidden"
+            />
+            <img
+              src="/images/footer/back-to-top-arrow-dark.svg"
+              alt=""
+              className="hidden h-[8.517px] w-[8.517px] rotate-[135deg] dark:block"
             />
           </span>
         </span>
@@ -157,16 +162,16 @@ function FooterLeft() {
     <div className="h-[432px] w-[686px] shrink-0 overflow-hidden border-b-[0.8px] border-l-[0.8px] border-r-[0.8px] border-[#c3c4c8]">
       <div className="flex w-[531px] flex-col items-start gap-[27px] pl-[37.2px] pt-[75px]">
         <NeomorphicPill>
-          <p className="font-mono text-[20px] font-bold tracking-[-0.1px] text-[#18191B]">PORTFOLIO</p>
+          <p className="font-mono text-[20px] font-bold tracking-[-0.1px] text-[#18191B] dark:text-[#EFF0F1]">PORTFOLIO</p>
         </NeomorphicPill>
         <div>
           <div className="flex items-end gap-[10px]">
-            <h3 className="whitespace-nowrap font-bricolage text-[64px] leading-[64.34px] font-medium tracking-[-0.1px] text-black" style={OPSZ}>
+            <h3 className="whitespace-nowrap font-bricolage text-[64px] leading-[64.34px] font-medium tracking-[-0.1px] text-black dark:text-[#EFF0F1]" style={OPSZ}>
               Jeevitesh Gaur
             </h3>
             <span className="mb-[10px] h-[8px] w-[8px] shrink-0 bg-[#FE5B2A] opacity-80" />
           </div>
-          <p className="mt-[6px] whitespace-nowrap font-bricolage text-[14px] leading-[24px] tracking-[0.32px] text-[#18191B]" style={OPSZ}>
+          <p className="mt-[6px] whitespace-nowrap font-bricolage text-[14px] leading-[24px] tracking-[0.32px] text-[#18191B] dark:text-[#EFF0F1]" style={OPSZ}>
             Interaction Designer | Product Designer
           </p>
         </div>
@@ -197,7 +202,7 @@ function SocialLink({
         {icon === "linkedin" && <span className="font-bricolage text-[13px] font-bold text-[#18191B]">in</span>}
         {icon === "behance" && <span className="font-bricolage text-[13px] font-bold italic text-[#18191B]">Be</span>}
       </span>
-      <span className="whitespace-nowrap font-outfit text-[12px] tracking-[0.32px] text-[#18191B]">{label}</span>
+      <span className="whitespace-nowrap font-outfit text-[12px] tracking-[0.32px] text-[#18191B] dark:text-[#EFF0F1]">{label}</span>
     </a>
   );
 }
@@ -206,23 +211,23 @@ function FooterRight() {
   return (
     <div className="h-[431px] w-[562px] shrink-0 overflow-hidden border-b-[0.8px] border-r-[0.8px] border-[#c3c4c8]">
       <div className="flex w-[443px] flex-col items-start pl-[60px] pt-[68px]">
-        <p className="font-bricolage text-[13px] leading-[24px] tracking-[0.32px] text-[#18191B]" style={OPSZ}>
+        <p className="font-bricolage text-[13px] leading-[24px] tracking-[0.32px] text-[#18191B] dark:text-[#EFF0F1]" style={OPSZ}>
           {`Currently based in Ahmedabad, India's Heritage City.`}
           <br />
           Always happy to connect !
         </p>
 
         <div className="flex flex-col gap-[10px] pt-[10px]">
-          <p className="font-bricolage text-[13px] font-bold text-[#18191B]" style={OPSZ}>
+          <p className="font-bricolage text-[13px] font-bold text-[#18191B] dark:text-[#EFF0F1]" style={OPSZ}>
             Pages
           </p>
-          <Link href="/" className="font-outfit text-[13px] text-[#18191B]">
+          <Link href="/" className="font-outfit text-[13px] text-[#18191B] dark:text-[#EFF0F1]">
             Home
           </Link>
-          <Link href="/#featured-projects" className="font-outfit text-[13px] text-[#18191B]">
+          <Link href="/#featured-projects" className="font-outfit text-[13px] text-[#18191B] dark:text-[#EFF0F1]">
             My Work
           </Link>
-          <Link href="/#about" className="font-outfit text-[13px] text-[#18191B]">
+          <Link href="/#about" className="font-outfit text-[13px] text-[#18191B] dark:text-[#EFF0F1]">
             About
           </Link>
         </div>
@@ -262,8 +267,8 @@ function FooterRight() {
 function CopyrightBar() {
   return (
     <div className="flex h-[62px] items-center justify-between border-l-[0.8px] border-r-[0.8px] border-[#c3c4c8] px-[38px]">
-      <p className="whitespace-nowrap font-outfit text-[14px] tracking-[0.24px] text-[#18191B]">© Jeevitesh Gaur @2026</p>
-      <p className="whitespace-nowrap font-outfit font-light text-[14px] tracking-[-0.1px] text-black">
+      <p className="whitespace-nowrap font-outfit text-[14px] tracking-[0.24px] text-[#18191B] dark:text-[#EFF0F1]">© Jeevitesh Gaur @2026</p>
+      <p className="whitespace-nowrap font-outfit font-light text-[14px] tracking-[-0.1px] text-black dark:text-[#EFF0F1]">
         Designed through iterations, late nights and caffeine
       </p>
     </div>
@@ -280,7 +285,12 @@ function FooterBackground() {
       <img
         src="/images/plus-grid.png"
         alt=""
-        className="pointer-events-none absolute left-0 top-0 h-full w-[112.5%] object-cover opacity-[0.15]"
+        className="pointer-events-none absolute left-0 top-0 h-full w-[112.5%] object-cover opacity-[0.15] dark:hidden"
+      />
+      <img
+        src="/images/plus-grid-dark.png"
+        alt=""
+        className="pointer-events-none absolute left-0 top-0 hidden h-full w-[112.5%] object-cover dark:block"
       />
       <div className="relative mx-auto max-w-[1440px] px-[96px]">
         <div className="flex">
@@ -295,7 +305,7 @@ function FooterBackground() {
 
 export function TestimonialsAboutFooter() {
   return (
-    <section className="relative bg-[#EFF0F1]">
+    <section className="relative bg-[#EFF0F1] dark:bg-[#18191B]">
       <div className="relative mx-auto max-w-[1440px] px-[96px]">
         <TestimonialsHeadingRow />
         <FilterPillsRow />

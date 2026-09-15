@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lato, JetBrains_Mono, Outfit, Gochi_Hand, Bricolage_Grotesque } from "next/font/google";
 import localFont from "next/font/local";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
 // Self-hosted straight from the type foundry's own OFL source (the same
@@ -65,11 +66,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fraunces.variable} ${lato.variable} ${jetbrainsMono.variable} ${outfit.variable} ${gochiHand.variable} ${bricolageGrotesque.variable} bg-[#EFF0F1] antialiased`}
+        className={`${fraunces.variable} ${lato.variable} ${jetbrainsMono.variable} ${outfit.variable} ${gochiHand.variable} ${bricolageGrotesque.variable} bg-[#EFF0F1] antialiased dark:bg-[#18191B]`}
       >
-        {children}
+        {/* attribute="class" toggles Tailwind's dark: variant via a class
+            on <html>. defaultTheme + no enableSystem: every new visitor
+            opens in light mode regardless of their OS setting - only an
+            explicit toggle click (persisted to localStorage from then on)
+            switches to dark. suppressHydrationWarning on <html> is required
+            here: next-themes sets the class before React hydrates via an
+            inline script, which would otherwise trip a mismatch warning. */}
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
