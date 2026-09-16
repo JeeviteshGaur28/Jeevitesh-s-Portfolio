@@ -147,6 +147,111 @@ function ReadPill({ href, bgColor }: { href: string; bgColor: string }) {
   );
 }
 
+// Real project images, pulled directly from each card's own Figma node
+// (1582:2115 for row 1, 1582:2177 for row 2) - exact same absolute
+// positions/crops as the source, not simplified to one full-bleed photo,
+// since Vasna and Buried in the Crowd are genuine collages there, not a
+// single image. Card 4 (Polite paparazzo) has no image in the source file
+// itself yet, so it correctly stays the plain grey placeholder.
+
+// Card 1: a single full-bleed photo, object-position bottom (matches the
+// source exactly).
+function KuldharaImage() {
+  return (
+    <img
+      src="/images/projects/kuldhara-photo.png"
+      alt=""
+      className="pointer-events-none absolute inset-0 h-full w-full object-cover object-bottom"
+    />
+  );
+}
+
+// Card 2: a rotated decorative polygon peeking in from the top-right,
+// behind the board-game photo sitting directly on the grey background -
+// no card/shadow wrapper around the photo itself. (Figma also has a small
+// ellipse+arrow decoration on this node, but it sits at local y=623 inside
+// a 375px-tall, overflow-clipped frame - entirely below the visible area
+// in the source itself, so it's omitted here too: including it would
+// either stay invisible or introduce something the design never actually
+// shows.)
+function VasnaImage() {
+  return (
+    <>
+      <div
+        className="pointer-events-none absolute flex items-center justify-center"
+        style={{ left: 336, top: -57, width: 286.661, height: 264.414 }}
+      >
+        <div style={{ transform: "rotate(-15.21deg)" }}>
+          <div className="relative" style={{ width: 240.335, height: 208.673 }}>
+            <div className="absolute left-[6.7%] right-[6.7%] top-0" style={{ bottom: "25%" }}>
+              <img src="/images/projects/vasna-polygon.svg" alt="" className="block h-full w-full max-w-none" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="pointer-events-none absolute" style={{ left: 100.97, top: 13, width: 341, height: 350 }}>
+        <img
+          src="/images/projects/vasna-board-photo.png"
+          alt=""
+          className="absolute inset-0 h-full w-full object-contain object-bottom"
+        />
+      </div>
+    </>
+  );
+}
+
+// Card 3: three separately-cropped images (title graphic, the large
+// crowd-reaching sketch, and the small reaching-arm sketch) - each crop
+// window (the oversized image + overflow-hidden window it sits in) copied
+// exactly from Figma's own percentages rather than approximated with
+// object-fit, since these aren't simple centered crops.
+function BuriedImage() {
+  return (
+    <>
+      <div className="pointer-events-none absolute overflow-hidden" style={{ left: 21.2, top: 34, width: 327, height: 108 }}>
+        <img
+          src="/images/projects/buried-title.png"
+          alt=""
+          className="absolute max-w-none"
+          style={{ height: "234.73%", left: "-23.1%", top: "0.34%", width: "138.5%" }}
+        />
+      </div>
+      <div className="pointer-events-none absolute overflow-hidden" style={{ left: 0.2, top: 177, width: 441, height: 198 }}>
+        <img
+          src="/images/projects/buried-illustration-large.png"
+          alt=""
+          className="absolute max-w-none"
+          style={{ height: "173.9%", left: 0, top: "-73.9%", width: "117.08%" }}
+        />
+      </div>
+      <div
+        className="pointer-events-none absolute overflow-hidden rounded-[32px]"
+        style={{ left: 391.2, top: 0, width: 178, height: 164 }}
+      >
+        <img
+          src="/images/projects/buried-illustration-small.png"
+          alt=""
+          className="absolute max-w-none"
+          style={{ height: "173.9%", left: "-124.61%", top: 0, width: "240.74%" }}
+        />
+      </div>
+    </>
+  );
+}
+
+// Card 4: added after the fact in Figma - a single full-bleed photo with
+// a 2.5px blur (matching the node exactly), fitting since this one's
+// still "Coming Soon".
+function PaparazzoImage() {
+  return (
+    <img
+      src="/images/projects/paparazzo-photo.png"
+      alt=""
+      className="pointer-events-none absolute inset-0 h-full w-full object-cover blur-[2.5px]"
+    />
+  );
+}
+
 // Pulled from card 4's own Figma node - same pill treatment, no arrow.
 function ComingSoonPill() {
   return (
@@ -160,6 +265,7 @@ function ComingSoonPill() {
 }
 
 type Project = {
+  id: "kuldhara" | "vasna" | "buried" | "paparazzo";
   title: string;
   description: string;
   tags: string[];
@@ -173,6 +279,7 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
+    id: "kuldhara",
     title: "The Village of Kuldhara (VR)",
     description:
       "Pull a real rope inside a VR experience set in Kuldhara to unravel what actually happened, witnessed through Munshi, the village's record-keeper.",
@@ -183,6 +290,7 @@ const PROJECTS: Project[] = [
     bgColor: "#FFF9F0",
   },
   {
+    id: "vasna",
     title: "Hop and Shop in Vasna",
     description: "Ethnographic research at Vasna's market, turned into a playable tabletop board game.",
     tags: ["Ethnographic Research", "Game Design", "UX Case Study"],
@@ -192,6 +300,7 @@ const PROJECTS: Project[] = [
     bgColor: "#193C3C",
   },
   {
+    id: "buried",
     title: "Buried in the Crowd",
     description:
       "A systems-level investigation into stampedes in India, mapping leverage points toward solutions that could prevent the next one.",
@@ -202,6 +311,7 @@ const PROJECTS: Project[] = [
     bgColor: "#E9E4D7",
   },
   {
+    id: "paparazzo",
     title: "Polite paparazzo",
     description:
       "A CCTV camera on a Raspberry Pi that blurs the face of anyone wearing a hand-painted marker, and records everyone else as usual.",
@@ -211,13 +321,22 @@ const PROJECTS: Project[] = [
   },
 ];
 
-// Image area is a flat #D9D9D9 placeholder, matching Figma exactly - no
-// real project photography exists yet, so this isn't a corner cut, it's
-// what the source file itself shows.
+// All four cards now have their real image/collage from Figma, inserted
+// BEFORE the hover-reveal pill below so the pill's own DOM position (and
+// therefore its stacking + hover target) is completely unchanged.
+function ProjectImage({ id }: { id: Project["id"] }) {
+  if (id === "kuldhara") return <KuldharaImage />;
+  if (id === "vasna") return <VasnaImage />;
+  if (id === "buried") return <BuriedImage />;
+  if (id === "paparazzo") return <PaparazzoImage />;
+  return null;
+}
+
 function ProjectCard({ project, className }: { project: Project; className?: string }) {
   return (
     <div className={`flex flex-col gap-[28px] bg-[#EFF0F1] px-[27px] py-[39px] dark:bg-[#18191B] ${className ?? ""}`}>
       <div className="group/image relative h-[375px] w-full overflow-hidden bg-[#D9D9D9]">
+        <ProjectImage id={project.id} />
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-90 opacity-0 transition-all duration-300 ease-out group-hover/image:scale-100 group-hover/image:opacity-100">
           {project.cta === "read" ? <ReadPill href={project.href!} bgColor={project.bgColor!} /> : <ComingSoonPill />}
         </div>
