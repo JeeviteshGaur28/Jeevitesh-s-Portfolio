@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato, JetBrains_Mono, Outfit, Gochi_Hand, Bricolage_Grotesque } from "next/font/google";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes";
+import { PageTransitionProvider } from "@/components/PageTransition";
 import "./globals.css";
 
 // Self-hosted straight from the type foundry's own OFL source (the same
@@ -78,7 +79,7 @@ export default function RootLayout({
             here: next-themes sets the class before React hydrates via an
             inline script, which would otherwise trip a mismatch warning. */}
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-          {children}
+          <PageTransitionProvider>{children}</PageTransitionProvider>
         </ThemeProvider>
       </body>
     </html>

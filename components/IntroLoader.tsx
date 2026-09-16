@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import styles from "./IntroLoader.module.css";
 
 type Segment = { t: number; v: number };
@@ -61,7 +61,20 @@ export function IntroLoader() {
   const panelRef = useRef<HTMLDivElement>(null);
   const [hidden, setHidden] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // `<html>` (set by app/layout.tsx) never remounts across client-side
+    // navigation - only a genuine fresh document load starts without this
+    // class. Without this check, going home -> case study -> back
+    // re-mounted this component (page.tsx renders fresh each time it's
+    // navigated to) and replayed the entire splash on every single return
+    // to "/", not just the real first visit. useLayoutEffect (not
+    // useEffect) so this resolves before paint - no one-frame flash of
+    // the splash's resting state on a skipped replay.
+    if (document.documentElement.classList.contains("site-intro-done")) {
+      setHidden(true);
+      return;
+    }
+
     const cover = coverRef.current;
     const panel = panelRef.current;
     if (!cover || !panel) return;

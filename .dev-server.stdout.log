@@ -1,0 +1,20 @@
+
+> kuldhara-case-study@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.5
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.1s
+ ○ Compiling / ...
+ ✓ Compiled / in 4.2s (1359 modules)
+ GET / 200 in 1762ms
+ GET / 200 in 68ms
+ GET / 200 in 79ms
+ ○ Compiling /work/kuldhara ...
+ ✓ Compiled /work/kuldhara in 1441ms (1295 modules)
+ ○ Compiling /work/vasna ...
+ ✓ Compiled /work/vasna in 953ms (1311 modules)
+ ○ Compiling /work/buried-in-the-crowd ...
+ ✓ Compiled /work/buried-in-the-crowd in 7s (1528 modules)

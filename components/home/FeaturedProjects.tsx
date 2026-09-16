@@ -1,7 +1,9 @@
 "use client";
 
+import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import { Loadout } from "./Loadout";
+import { usePageTransition } from "../PageTransition";
 
 // Scroll-in treatment matches the hero's own entrance (scale 92%->100% +
 // fade), but triggered per-row via whileInView instead of on page load -
@@ -120,16 +122,28 @@ function TagPill({ children }: { children: string }) {
 
 // Real Figma asset (the "Read" pill on card 1), reused hover-only on all
 // 4 cards per spec - Figma only draws it once, that's a file limitation
-// not the intended design.
-function ReadPill() {
+// not the intended design. Now triggers the slip-up page transition
+// instead of a plain Link - "leaving" color is home's own current bg
+// (light/dark aware, via next-themes), "arriving" color is that specific
+// case study's real page background, so the reveal on the other side is
+// seamless rather than a flat brand-orange cut.
+function ReadPill({ href, bgColor }: { href: string; bgColor: string }) {
+  const { navigate } = usePageTransition();
+  const { resolvedTheme } = useTheme();
+  const homeColor = resolvedTheme === "dark" ? "#18191B" : "#EFF0F1";
+
   return (
-    <div className="relative flex items-center gap-[8px] rounded-[98px] bg-[#FE5B2A] px-[28px] py-[15px] drop-shadow-[0px_20px_13.75px_rgba(26,18,10,0.3)]">
+    <button
+      type="button"
+      onClick={() => navigate(href, homeColor, bgColor)}
+      className="relative flex items-center gap-[8px] rounded-[98px] bg-[#FE5B2A] px-[28px] py-[15px] drop-shadow-[0px_20px_13.75px_rgba(26,18,10,0.3)]"
+    >
       <span className="pointer-events-none absolute inset-0 rounded-[inherit] shadow-[inset_0px_-5px_4px_0px_rgba(255,255,255,0.31),inset_0px_8px_6.3px_0px_rgba(0,0,0,0.25)]" />
       <p className="relative whitespace-nowrap font-mono text-[20px] font-extrabold tracking-[-0.1px] text-[#EFF0F1]">
         Read
       </p>
       <img src="/images/projects/cta-arrow.svg" alt="" className="relative h-[12px] w-[12px] rotate-180" />
-    </div>
+    </button>
   );
 }
 
@@ -151,6 +165,10 @@ type Project = {
   tags: string[];
   team: "solo" | "group";
   cta: "read" | "coming-soon";
+  href?: string;
+  // That case study's own real page background - used so the page
+  // transition's reveal color matches exactly what's actually there.
+  bgColor?: string;
 };
 
 const PROJECTS: Project[] = [
@@ -161,6 +179,8 @@ const PROJECTS: Project[] = [
     tags: ["Multisensory Design", "VR Experience Design", "Narrative Design", "3D World-Building"],
     team: "solo",
     cta: "read",
+    href: "/work/kuldhara",
+    bgColor: "#FFF9F0",
   },
   {
     title: "Hop and Shop in Vasna",
@@ -168,6 +188,8 @@ const PROJECTS: Project[] = [
     tags: ["Ethnographic Research", "Game Design", "UX Case Study"],
     team: "group",
     cta: "read",
+    href: "/work/vasna",
+    bgColor: "#193C3C",
   },
   {
     title: "Buried in the Crowd",
@@ -176,6 +198,8 @@ const PROJECTS: Project[] = [
     tags: ["Systems Thinking", "Systems Design", "Research", "Leverage Points"],
     team: "group",
     cta: "read",
+    href: "/work/buried-in-the-crowd",
+    bgColor: "#E9E4D7",
   },
   {
     title: "Polite paparazzo",
@@ -195,7 +219,7 @@ function ProjectCard({ project, className }: { project: Project; className?: str
     <div className={`flex flex-col gap-[28px] bg-[#EFF0F1] px-[27px] py-[39px] dark:bg-[#18191B] ${className ?? ""}`}>
       <div className="group/image relative h-[375px] w-full overflow-hidden bg-[#D9D9D9]">
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-90 opacity-0 transition-all duration-300 ease-out group-hover/image:scale-100 group-hover/image:opacity-100">
-          {project.cta === "read" ? <ReadPill /> : <ComingSoonPill />}
+          {project.cta === "read" ? <ReadPill href={project.href!} bgColor={project.bgColor!} /> : <ComingSoonPill />}
         </div>
       </div>
 

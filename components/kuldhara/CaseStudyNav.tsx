@@ -70,7 +70,7 @@ export function CaseStudyNav() {
           above watches this, not the nav pill itself. */}
       <div ref={sentinelRef} aria-hidden className="absolute left-0 top-0 h-px w-px" />
 
-      <div className="fixed left-1/2 top-[38px] z-[60] -translate-x-1/2">
+      <div className="fixed left-1/2 top-[17px] z-[60] -translate-x-1/2">
         <AnimatePresence>
           {visible && (
             <motion.a

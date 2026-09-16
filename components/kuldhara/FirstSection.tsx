@@ -1,27 +1,32 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
+import { usePageTransition } from "../PageTransition";
 
-// The real "1st section" node (1771:2420) in Figma: back button and the
-// heading+divider block are part of ONE static composition at the very
-// top of the page (0,0 to 1440x467, ending exactly where the Hero image
-// begins) - Figma only shows this resting/scroll-0 position, so it scrolls
-// away with the page like everything else. Every element below is
-// absolutely positioned using its real left/top within this one section.
-// The nav bar (email/contact pill) is a separate, `fixed`, scroll-triggered
-// element - see CaseStudyNav.tsx - since a scroll-to-fade-in interaction
-// isn't something a static design tool can express as a layout position.
+// The real "1st section" node (1771:2420) in Figma: the heading+divider
+// block is a static composition at the very top of the page (0,0 to
+// 1440x467, ending exactly where the Hero image begins) - Figma only
+// shows this resting/scroll-0 position, so it scrolls away with the page
+// like everything else. Every element below is absolutely positioned
+// using its real left/top within this one section.
+//
+// The back button itself is NOT part of that scrolling composition - it's
+// `fixed`, matching the other two case studies' back buttons (position
+// standardized off buried-in-the-crowd's reference: left is center-anchored
+// via calc(), not a fixed left offset, so it stays centered relative to the
+// viewport the same way theirs do). The nav bar (email/contact pill) is
+// the other fixed, scroll-triggered element - see CaseStudyNav.tsx.
 export function FirstSection() {
-  const router = useRouter();
+  const { navigate } = usePageTransition();
+  const { resolvedTheme } = useTheme();
 
   return (
-    <div className="relative mx-auto h-[467px] max-w-[1440px]">
+    <>
       <button
         type="button"
         aria-label="Back"
-        onClick={() => router.push("/")}
-        className="absolute flex items-center gap-[10px] rounded-[98px] bg-[#fe5b2a] px-[22px] py-[17px] drop-shadow-[0px_20px_20px_rgba(26,18,10,0.42)] backdrop-blur-[10.5px] transition-transform duration-200 ease-out hover:scale-105"
-        style={{ left: 120, top: 49, width: 111, height: 48 }}
+        onClick={() => navigate("/", "#FFF9F0", resolvedTheme === "dark" ? "#18191B" : "#EFF0F1")}
+        className="fixed left-[calc(50%-598px)] top-[21px] z-[60] flex h-[48px] w-[111px] items-center gap-[10px] rounded-[98px] bg-[#fe5b2a] px-[22px] py-[17px] drop-shadow-[0px_20px_20px_rgba(26,18,10,0.42)] backdrop-blur-[10.5px] transition-transform duration-200 ease-out hover:scale-105"
       >
         <span className="pointer-events-none absolute inset-0 rounded-[inherit] shadow-[inset_0px_-5px_4px_0px_rgba(255,255,255,0.31),inset_0px_8px_6.3px_0px_rgba(0,0,0,0.25)]" />
         <img src="/images/nav-back-arrow.svg" alt="" className="relative h-[16px] w-[16px] rotate-45" />
@@ -30,6 +35,7 @@ export function FirstSection() {
         </p>
       </button>
 
+      <div className="relative mx-auto h-[467px] max-w-[1440px]">
       <div className="absolute" style={{ left: 276, top: 171, width: 791 }}>
         <div className="flex flex-col gap-[15px]">
           <div className="w-[730px]">
@@ -79,6 +85,7 @@ export function FirstSection() {
       >
         Case Study
       </p>
-    </div>
+      </div>
+    </>
   );
 }

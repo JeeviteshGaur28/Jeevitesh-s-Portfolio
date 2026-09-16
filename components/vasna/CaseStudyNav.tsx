@@ -48,7 +48,7 @@ export function CaseStudyNav() {
   const visible = useScrolledPast(FADE_IN_AT);
 
   return (
-    <div className="fixed left-1/2 top-[32px] z-[60] -translate-x-1/2">
+    <div className="fixed left-1/2 top-[17px] z-[60] -translate-x-1/2">
       <AnimatePresence>
         {visible && (
           <motion.a
