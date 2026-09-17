@@ -109,10 +109,12 @@ function ThemeToggle() {
         >
           <circle cx="57.4011" cy="27.0984" r="13.3246" fill="url(#toggle-thumb-rim)" />
           <circle cx="57.3993" cy="27.1005" r="12.2368" fill="url(#toggle-thumb-texture)" />
-          <path
-            d="M57.8727 21.6909H59.4182V20.1455H60.9636V18.6H56.3273V20.1455H57.8727V21.6909ZM50.1455 32.5091H51.6909V30.9636H50.1455V32.5091ZM51.6909 34.0545H53.2364V32.5091H51.6909V34.0545ZM48.6 30.9636H50.1455V29.4182H51.6909V27.8727H50.1455V26.3273H48.6V30.9636ZM53.2364 35.6H60.9636V34.0545H53.2364V35.6ZM51.6909 30.9636H57.8727V29.4182H51.6909V30.9636ZM60.9636 34.0545H62.5091V32.5091H60.9636V34.0545ZM57.8727 29.4182H59.4182V27.8727H57.8727V29.4182ZM62.5091 32.5091H64.0545V30.9636H62.5091V32.5091ZM59.4182 27.8727H60.9636V21.6909H59.4182V27.8727ZM64.0545 30.9636H65.6V23.2364H64.0545V30.9636ZM60.9636 21.6909H62.5091V20.1455H60.9636V21.6909ZM62.5091 23.2364H64.0545V21.6909H62.5091V23.2364Z"
-            fill="#18191B"
-          />
+          {isOn && (
+            <path
+              d="M57.8727 21.6909H59.4182V20.1455H60.9636V18.6H56.3273V20.1455H57.8727V21.6909ZM50.1455 32.5091H51.6909V30.9636H50.1455V32.5091ZM51.6909 34.0545H53.2364V32.5091H51.6909V34.0545ZM48.6 30.9636H50.1455V29.4182H51.6909V27.8727H50.1455V26.3273H48.6V30.9636ZM53.2364 35.6H60.9636V34.0545H53.2364V35.6ZM51.6909 30.9636H57.8727V29.4182H51.6909V30.9636ZM60.9636 34.0545H62.5091V32.5091H60.9636V34.0545ZM57.8727 29.4182H59.4182V27.8727H57.8727V29.4182ZM62.5091 32.5091H64.0545V30.9636H62.5091V32.5091ZM59.4182 27.8727H60.9636V21.6909H59.4182V27.8727ZM64.0545 30.9636H65.6V23.2364H64.0545V30.9636ZM60.9636 21.6909H62.5091V20.1455H60.9636V21.6909ZM62.5091 23.2364H64.0545V21.6909H62.5091V23.2364Z"
+              fill="#18191B"
+            />
+          )}
           <defs>
             <linearGradient id="toggle-thumb-rim" x1="57.1292" y1="13.7738" x2="57.4011" y2="40.423" gradientUnits="userSpaceOnUse">
               <stop offset="0.503066" stopColor="white" />
@@ -138,6 +140,19 @@ function ThemeToggle() {
             </pattern>
           </defs>
         </svg>
+        {!isOn && (
+          <img
+            src="/images/hero/theme-toggle-sun.svg"
+            alt=""
+            className="pointer-events-none absolute h-[19px] w-[19px]"
+            style={{
+              left: "47.9px",
+              top: "17.6px",
+              transform: `translateX(${TOGGLE_OFF_X}px)`,
+              transition: "transform 280ms ease",
+            }}
+          />
+        )}
       </span>
     </button>
   );
@@ -367,7 +382,11 @@ function HeroPhoto() {
 //   Nav bar  x=598 y=793 w=244 h=78     -> bottom (900-871)/900 = 3.22%, centered
 export function Hero() {
   return (
-    <section className="relative h-screen overflow-hidden bg-[#EFF0F1] dark:bg-[#18191B]">
+    <section className="relative h-screen overflow-visible bg-[#EFF0F1] dark:bg-[#18191B]">
+      <span
+        aria-hidden
+        className="pointer-events-none absolute bottom-[-0.8px] left-0 z-10 h-[0.8px] w-full bg-[#C3C4C8]"
+      />
       {/* Item 1: plus-grid background, reusing the loading screen's asset at
           20% opacity. Dark mode swaps to a real dark-mode export from
           Figma (not just a CSS filter) - it's a different tile, not the
